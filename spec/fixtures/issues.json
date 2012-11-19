@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK 
+Content-Type: application/json; charset=utf-8
+X-Ua-Compatible: IE=Edge,chrome=1
+Etag: "dad82e7fd3e3ab6c1e267fd3566fc510"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 855094a5e67a53d870ed239867cf040f
+X-Runtime: 0.143038
+Content-Length: 792
+Server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+Date: Tue, 13 Nov 2012 08:01:56 GMT
+Connection: Keep-Alive
+Set-Cookie: _redmine_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWVjMDBmYjNiZGRkOWZhOTc5YzZhYjUyZGRhZDQ0Nzg1BjsAVEkiCnF1ZXJ5BjsARnsJOg9wcm9qZWN0X2lkaQGEOgxmaWx0ZXJzewZJIg5zdGF0dXNfaWQGOwBGewc6DW9wZXJhdG9ySSIGbwY7AEY6C3ZhbHVlc1sGSSIABjsARjoNZ3JvdXBfYnkwOhFjb2x1bW5fbmFtZXMwSSIWaXNzdWVzX2luZGV4X3NvcnQGOwBGSSIMaWQ6ZGVzYwY7AEY%3D--f6ed10a0e93bda2dc0882d143cca0afe96cd4e91; path=/; HttpOnly
+
+{"issues":[{"id":10328,"project":{"id":132,"name":"API Testing"},"tracker":{"id":1,"name":"Bug"},"status":{"id":2,"name":"In Progress"},"priority":{"id":6,"name":"Urgent"},"author":{"id":42,"name":"Joe Mahoney"},"subject":"In progress urgent bug","description":"","start_date":"2012-11-13","done_ratio":0,"created_on":"2012-11-13T07:51:17Z","updated_on":"2012-11-13T07:51:17Z"},{"id":10326,"project":{"id":132,"name":"API Testing"},"tracker":{"id":1,"name":"Bug"},"status":{"id":1,"name":"New"},"priority":{"id":6,"name":"Urgent"},"author":{"id":42,"name":"Joe Mahoney"},"subject":"New Urgent Bug","description":"This is a new urgent bug","start_date":"2012-11-13","done_ratio":0,"created_on":"2012-11-13T07:50:20Z","updated_on":"2012-11-13T07:50:20Z"}],"total_count":2,"offset":0,"limit":25}

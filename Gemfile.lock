@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    redmine-weary (0.1.0)
+    redmine_weary (0.1.0)
       weary (~> 1.1.0)
 
 GEM
@@ -38,6 +38,6 @@ PLATFORMS
 
 DEPENDENCIES
   rake (~> 0.9.2)
-  redmine-weary!
+  redmine_weary!
   rspec (~> 2.11.0)
   webmock (~> 1.8.10)
