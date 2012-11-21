@@ -1,6 +1,13 @@
 require 'redmine_weary'
-require 'webmock/rspec'
+#RedmineWeary::Client and subclasses rely on config variables to be set
+#when they are loaded/required by ruby
+RedmineWeary.configure do |config|
+  config.redmine_host = 'http://example.com'
+  config.api_key = 'MYAPIKEY'
+end
+require 'redmine_weary/client'
 
+require 'webmock/rspec'
 WebMock.disable_net_connect!
 
 def fixture_path

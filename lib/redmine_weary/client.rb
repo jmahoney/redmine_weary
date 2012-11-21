@@ -2,15 +2,17 @@ require "weary/client"
 
 module RedmineWeary
   class Client < Weary::Client
+    
     FORMAT = "json"
-      
+    DOMAIN = ENV['REDMINE_HOST']
+    
+    domain RedmineWeary.configuration.redmine_host
 
-    def initialize(host, api_key)
-      self.class.domain(host)
+    def initialize
       @defaults = {}
-      @defaults[:key] = api_key   
+      @defaults[:key] = RedmineWeary.configuration.api_key   
     end
-
+    
     autoload :Issues, "redmine_weary/client/issues"
   end
 end
