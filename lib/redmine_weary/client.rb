@@ -5,10 +5,10 @@ module RedmineWeary
     FORMAT = "json"
       
 
-    def initialize(host,key)
-      self.class.domain host
+    def initialize(host, api_key)
+      self.class.domain(host)
       @defaults = {}
-      @defaults[:key] = key   
+      @defaults[:key] = api_key   
     end
 
     autoload :Issues, "redmine_weary/client/issues"
