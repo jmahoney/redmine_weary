@@ -1,9 +1,9 @@
 module RedmineWeary
   class Configuration
-    attr_accessor :redmine_host, :api_key
+    attr_accessor :endpoint, :api_key
 
     def initialize
-      @redmine_host = ""
+      @endpoint = ""
       @api_key = ""
     end
 

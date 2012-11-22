@@ -2,7 +2,7 @@ module RedmineWeary
   class Client
     class Issues < RedmineWeary::Client
       
-      domain RedmineWeary.configuration.redmine_host
+      domain RedmineWeary.configuration.endpoint
       
       get :show, "/issues/:issue_id.#{FORMAT}" do |resource|
         resource.required :key

@@ -4,9 +4,8 @@ module RedmineWeary
   class Client < Weary::Client
     
     FORMAT = "json"
-    DOMAIN = ENV['REDMINE_HOST']
     
-    domain RedmineWeary.configuration.redmine_host
+    domain RedmineWeary.configuration.endpoint
 
     def initialize
       @defaults = {}

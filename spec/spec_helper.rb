@@ -2,7 +2,7 @@ require 'redmine_weary'
 #RedmineWeary::Client and subclasses rely on config variables to be set
 #when they are loaded/required by ruby
 RedmineWeary.configure do |config|
-  config.redmine_host = 'http://example.com'
+  config.endpoint = 'http://example.com'
   config.api_key = 'MYAPIKEY'
 end
 require 'redmine_weary/client'

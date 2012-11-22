@@ -16,13 +16,58 @@ module RedmineWeary
     end
     
     def self.create(issue_id)
-      response = issue(issue_id).perform
-      self.new response.parse
+      response = show(issue_id).perform
+      self.new(response.parse)
     end
     
     def initialize(issue_body)
-      @issue = issue_body
+      @issue = issue_body['issue']
     end
+    
+    def id
+      @issue['id'].to_i
+    end
+    
+    def subject
+      @issue['subject']
+    end
+    
+    def description
+      @issue['description']
+    end
+    
+    def status_id
+      @issue['status']['id'].to_i
+    end
+    
+    def status_name
+      @issue['status']['name']
+    end
+    
+    def tracker_id
+      @issue['tracker']['id'].to_i
+    end
+    
+    def tracker_name
+      @issue['tracker']['name']
+    end
+    
+    def priority_id
+      @issue['priority']['id'].to_i
+    end
+    
+    def priority_name
+      @issue['priority']['name']
+    end
+    
+    def project_id
+      @issue['project']['id'].to_i
+    end
+    
+    def project_name
+      @issue['project']['name']
+    end
+    
     
   end
   
