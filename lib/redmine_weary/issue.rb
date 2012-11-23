@@ -11,6 +11,25 @@ module RedmineWeary
       Weary::Deferred.new future, self, lambda {|issue, response| issue.new(response.parse) }
     end
     
+    def self.list(options = {})
+      response = client.list(options)
+    end
+    
+    def self.search(options = {})
+      response = list(options).perform
+      issues = []
+      response.parse['issues'].each do |issue|
+        issues << self.new(issue)
+      end
+      
+      issues
+    end
+    
+    def self.count
+      response = list(:limit => 0, :offset => 0).perform
+      response.parse['total_count'].to_i  
+    end
+    
     def self.show(issue_id)
       client.show(:issue_id => issue_id)
     end

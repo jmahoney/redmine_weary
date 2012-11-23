@@ -19,10 +19,30 @@ describe RedmineWeary::Issue do
     end
   end
   
+  describe "::list" do
+    it "generates a request for a list of issues" do
+      issues = described_class.list
+      issues.should be_kind_of Weary::Request
+    end
+  end
+  
+  describe "::search" do
+    it "creates an array of Issue instances from the request response" do
+      described_class.search.should be_instance_of Array
+      described_class.search[0].should be_instance_of described_class
+    end
+  end
+  
+  describe "::count" do
+    it "gets a count of the issues from the request response" do
+      described_class.count.should == 2
+    end
+  end
+  
   describe "::show" do
     it "generates a request for the details of a issue" do
-      detail = described_class.show(10328)
-      detail.should be_kind_of Weary::Request
+      issue = described_class.show(10328)
+      issue.should be_kind_of Weary::Request
     end
   end
   
