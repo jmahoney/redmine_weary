@@ -25,8 +25,8 @@ module RedmineWeary
       issues
     end
     
-    def self.count
-      response = list(:limit => 0, :offset => 0).perform
+    def self.count(options = {})      
+      response = list(options.merge(:limit => 0, :offset =>0)).perform
       response.parse['total_count'].to_i  
     end
     
