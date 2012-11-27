@@ -3,7 +3,8 @@
 This is a fairly simple wrapper for the [Redmine REST API][redmine]. 
 My main reasons for developing it were to create a [fancy dashboard][dashing] 
 for my [employer's][3months] internal bug tracker and to have a play with 
-[weary][Weary], a nifty framework/DSL for working with RESTful APIs.
+[weary][Weary], a nifty framework/DSL for working with RESTful APIs. Yes,
+I know I could have used ActiveResource, but where's the fun in that?
 
 redmine_weary is still very much a work in progress—at this point you can
 only really get a list of issues and a small amount of related information.
