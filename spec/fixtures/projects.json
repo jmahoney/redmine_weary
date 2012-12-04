@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK 
+Content-Type: application/json; charset=utf-8
+X-Ua-Compatible: IE=Edge,chrome=1
+Etag: "62658687492abe72f6ea654f2a15df78"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: ba7da2539ccdde82e48bd1cb0260a386
+X-Runtime: 0.174135
+Content-Length: 8136
+Server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+Date: Tue, 04 Dec 2012 08:20:23 GMT
+Connection: Keep-Alive
+
+{"projects":[{"id":132,"name":"API Testing","identifier":"apitesting","description":"Test project for API","custom_fields":[{"id":12,"name":"Cross-Browser Test Reqs","value":"foo"}],"created_on":"2012-11-13T07:49:27Z","updated_on":"2012-11-13T07:49:27Z"}],"total_count":1,"offset":0,"limit":25}

@@ -31,11 +31,11 @@ describe RedmineWeary::Client::Issues do
   end
   
   describe "#list" do
-    # it "generates a request to get a list of issues" do
-    #       issues = @client.list
-    #       issues.uri.to_s.should match "/issues.json"
-    #       issues.uri.query.to_s.should match "key=MYAPIKEY"
-    #     end
+    it "generates a request to get a list of issues" do
+      issues = @client.list
+      issues.uri.to_s.should match "/issues.json"
+      issues.uri.query.to_s.should match "key=MYAPIKEY"
+    end
     
     it "generates requests with optional filters" do
       issues = @client.list(:tracker_id => 2, :status_id => 1, :project_id => 1, 

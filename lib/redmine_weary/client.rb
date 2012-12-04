@@ -13,5 +13,6 @@ module RedmineWeary
     end
     
     autoload :Issues, "redmine_weary/client/issues"
+    autoload :Projects, "redmine_weary/client/projects"
   end
 end
