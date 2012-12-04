@@ -1,5 +1,6 @@
 module RedmineWeary
   autoload :Issue, 'redmine_weary/issue'
+  autoload :Project, 'redmine_weary/project'
 end
 
 require 'redmine_weary/configuration'
