@@ -11,7 +11,7 @@ module RedmineWeary
       get :list, "/issues.#{FORMAT}" do |resource|
         
         optional_args = [:tracker_id, :status_id, :project_id, :offset, :limit, 
-                          :sort, :assigned_to_id, :created_on]
+                          :sort, :assigned_to_id, :created_on, :priority_id]
                           
         10000.times do |i| 
           optional_args << "cf_#{i}".to_sym

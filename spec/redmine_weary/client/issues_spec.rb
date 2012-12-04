@@ -40,7 +40,8 @@ describe RedmineWeary::Client::Issues do
     it "generates requests with optional filters" do
       issues = @client.list(:tracker_id => 2, :status_id => 1, :project_id => 1, 
                               :offset => 0, :limit => 100, :sort => "ASC",
-                              :assigned_to_id => 232, :created_on => "2012-03-12")
+                              :assigned_to_id => 232, :created_on => "2012-03-12",
+                              :priority_id => 5)
                               
                                                     
       issues.uri.to_s.should match "/issues.json"
@@ -52,6 +53,7 @@ describe RedmineWeary::Client::Issues do
       issues.uri.query.to_s.should match "sort=ASC"
       issues.uri.query.to_s.should match "assigned_to_id=232"
       issues.uri.query.to_s.should match "created_on=2012-03-12"
+      issues.uri.query.to_s.should match "priority_id=5"
     end
     
     it "generates requests with support for up to 10000 custom fields" do

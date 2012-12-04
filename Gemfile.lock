@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    redmine_weary (0.4.0)
+    redmine_weary (0.4.1)
       weary (~> 1.1.0)
 
 GEM
