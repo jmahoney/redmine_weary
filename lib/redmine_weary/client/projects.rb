@@ -11,6 +11,7 @@ module RedmineWeary
       
       get :list, "/projects.#{FORMAT}" do |resource|
         resource.required :key
+        resource.optional :limit, :offset
       end
       
       

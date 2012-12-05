@@ -40,8 +40,13 @@ describe RedmineWeary::Client::Projects do
     it "generates a request for a list of projects" do
       projects = @client.list
       projects.uri.to_s.should match "/projects.json"
-      projects.uri.query.to_s.should match "key=MYAPIKEY"
-      
+      projects.uri.query.to_s.should match "key=MYAPIKEY"      
+    end
+    
+    it "generates a request for a list of projects with a limit and offset" do
+      projects = @client.list(:limit => 1, :offset => 0)
+      projects.uri.query.to_s.should match "limit=1"
+      projects.uri.query.to_s.should match "offset=0"
     end
   end
   
