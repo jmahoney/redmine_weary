@@ -1,5 +1,6 @@
 module RedmineWeary
   class Project
+    include RedmineWeary::Countable
     
     def self.client
       RedmineWeary::Client::Projects.new
@@ -17,11 +18,6 @@ module RedmineWeary
       end
       
       projects
-    end
-    
-    def self.count(options = {})      
-      response = list(options.merge(:limit => 1, :offset =>0)).perform
-      response.parse['total_count'].to_i  
     end
     
     def self.show(project_id)
