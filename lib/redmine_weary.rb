@@ -5,3 +5,4 @@ end
 
 require 'redmine_weary/configuration'
 require 'redmine_weary/version'
+require 'redmine_weary/countable'

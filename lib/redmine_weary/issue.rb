@@ -1,7 +1,9 @@
 module RedmineWeary
   
   class Issue
-    
+      
+    include RedmineWeary::Countable
+      
     def self.client
       RedmineWeary::Client::Issues.new
     end
@@ -23,11 +25,6 @@ module RedmineWeary
       end
       
       issues
-    end
-    
-    def self.count(options = {})      
-      response = list(options.merge(:limit => 1, :offset =>0)).perform
-      response.parse['total_count'].to_i  
     end
     
     def self.show(issue_id)
