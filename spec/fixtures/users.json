@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK 
+Content-Type: application/json; charset=utf-8
+X-Ua-Compatible: IE=Edge,chrome=1
+Etag: "bee6740e388645b85f683b8648612089"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 541544cf3a7733cdf00d1e2357750577
+X-Runtime: 0.038928
+Content-Length: 221
+Server: WEBrick/1.3.1 (Ruby/1.9.3/2012-04-20)
+Date: Mon, 17 Dec 2012 21:57:03 GMT
+Connection: Keep-Alive
+Set-Cookie: _redmine_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTA5MWFhZjU3MWE1N2EzYzI1MjNmN2U1OTg3MTFjZjg1BjsAVEkiFXVzZXJzX2luZGV4X3NvcnQGOwBGSSIKbG9naW4GOwBG--dde2b746850d786c2e7e0412003a08c14cc1196d; path=/; HttpOnly
+
+{"users":[{"id":259,"login":"BridgetH","firstname":"Bridget","lastname":"Hewson","mail":"259@example.com","created_on":"2012-08-31T01:31:56Z","last_login_on":"2012-10-23T21:13:05Z"}],"total_count":96,"offset":0,"limit":1}
