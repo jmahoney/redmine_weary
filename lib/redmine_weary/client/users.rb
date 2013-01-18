@@ -1,6 +1,5 @@
 module RedmineWeary
   class Client
-    
     class Users < RedmineWeary::Client
       
       domain RedmineWeary.configuration.endpoint

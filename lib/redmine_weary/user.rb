@@ -20,6 +20,14 @@ module RedmineWeary
       users
     end
     
+    def self.show(user_id)
+      client.show(:user_id => user_id)
+    end
+    
+    def self.create(user_id)
+      response = show(user_id).perform
+      self.new(response.parse)
+    end
     
     def initialize(user_body)
       @user = user_body['user']
