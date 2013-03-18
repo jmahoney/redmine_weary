@@ -6,12 +6,13 @@ for my [employer's][3months] internal bug tracker and to have a play with
 [weary][Weary], a nifty framework/DSL for working with RESTful APIs. Yes,
 I know I could have used ActiveResource, but where's the fun in that?
 
-redmine_weary is still very much a work in progress—at this point you can
-only really get a list of issues and a small amount of related information.
+**Current status:** the bug dashboard works and I probably won't update this unless I need to add 
+more functionality to the dashboard. Weary is a great little DSL, though.
 
 ##How to use
 
-The following code sets up the gem:
+You probably shouldn't. This gem doesn't support much of the Redmine API. lUse ActiveResource instead. 
+But if you must, the following code sets up the gem:
 
 ```
 require 'redmine_weary'
